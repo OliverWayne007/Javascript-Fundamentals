@@ -9,13 +9,18 @@ console.log( "The promise returned by the fetch() function is: " , promiseReturn
 
 console.log('\n');
 
+promiseReturned
+.then( (promiseResult) => { console.log("Promise Fulfilled !!!"); } )
+.catch( (error) => { console.log("Promise Rejected !!!"); } )
+.finally( () => { console.log("Promise Resolved !!!"); console.log('\n'); } );
+
 
 // Using Async - Await
 
 async function getData()
 {
     let fetchResultFromServer = await fetch( "http://jsonplaceholder.typicode.com/posts" );
-    console.log( fetchResultFromServer );
+    console.log( "The result of the async getData() function is:\n" , fetchResultFromServer );
     console.log('\n');
 }
 
@@ -30,6 +35,6 @@ console.log('\n');
 // Using Promise
 
 fetch( "http://jsonplaceholder.typicode.com/posts" )
-.then( (data) => { console.log( "The response recieved is: \n" , data ); console.log('\n'); } )
+.then( (promiseResult) => { console.log( "The response recieved is: \n" , promiseResult ); console.log('\n'); } )
 .catch( (error) => { console.log("The response recieved is: \n" , error ); console.log('\n'); } )
 .finally( () => { console.log( "The execution of the fetch() function is now complete !!!\n" ); } );

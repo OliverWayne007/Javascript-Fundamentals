@@ -4,6 +4,8 @@
 
 console.log('\n');
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+
 // Using forin loop to iterate over objects
 
 // Creating an object
@@ -39,6 +41,53 @@ for (const key in myObj) {
 
 console.log('\n');
 
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+
 // Iterating arrays using forin loop
+
+// Creating an array
+const arr = [1 , 2 , 3 , 4 , 5];
+
+// Printing the keys(indexes) of the array
+for (const key in arr) {
+    console.log(key);
+}
+
+console.log('\n');
+
+// Printing the values of the array
+for (const key in arr) {
+    console.log(arr[key]);
+}
+
+console.log('\n');
+
+// Printing the keys(indexes) and the corresponding values of the array
+for (const key in arr) {
+    console.log(key , " : " , arr[key]);
+}
+
+console.log('\n');
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+// Iterating over maps using forin loops
+
+// Creating a map
+const map = new Map();
+
+map.set("Oliver Queen" , "Green Arrow");
+map.set("Bruce Wayne" , "Dark Knight");
+map.set("Matt Murdock" , "Daredevil");
+map.set("Tony Stark" , "Iron Man");
+
+for (const key in map) {
+    console.log(key);
+}
+
+// Note: When using forin loop to iterate over maps, no error is generated but nothing is printed. But why ???
 
 console.log('\n');

@@ -56,6 +56,8 @@ console.log('\n');
 
 // Using the map function to create a new array from a given array
 const transformedArray = Ages.map( (age) => {return 2 * age} );
+Ages.map( (age) => {return 2 * age} );
+console.log(Ages , '\n');
 console.log(transformedArray);
 
 console.log('\n');

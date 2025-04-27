@@ -22,9 +22,10 @@ console.log(myPromise , typeof(myPromise));
 
 myPromise
 .then( (myPromiseResult) => { console.log( "Success !!!\nThe Promise result is: " , myPromiseResult ); } )
-.catch( (myPromiseResult) => { console.error( "Something went wrong !!!\nThe Promise result is: " , myPromiseResult ) } );
+.catch( (myPromiseResult) => { console.error( "Something went wrong !!!\nThe Promise result is: " , myPromiseResult ) } )
+.finally( () => { console.log('\n'); } );
 
-console.log('\n');   // This line is getting executed before the ".then" and the ".catch" line. Why ???
+//console.log('\n');   // This line is getting executed before the ".then" and the ".catch" line. Why ???
 // Ans: This is because promises are asynchronous !!!
 
 // myPromise.catch( (promiseResult) => { console.error( "Something went wrong !!!\nThe promise result is: " , promiseResult ) } );

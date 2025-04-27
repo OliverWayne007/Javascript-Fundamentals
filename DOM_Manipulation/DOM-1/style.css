@@ -1,0 +1,27 @@
+#heading1
+{
+    color : blueviolet;
+    background-color: yellow;
+}
+
+body
+{
+    background-color: pink;
+}
+
+#button
+{
+    background-color: brown;
+    color: aliceblue;
+}
+
+#heading2
+{
+    color: rgb(255, 7, 7);
+    background-color: bisque;
+}
+
+.headingClass
+{
+    text-align: center;
+}

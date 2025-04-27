@@ -1,0 +1,11 @@
+{
+  "name": "script-41_other_async_functions",
+  "version": "1.0.0",
+  "description": "In this tutorial we will be looking into other async functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tribal Chief",
+  "license": "ISC"
+}

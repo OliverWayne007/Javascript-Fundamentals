@@ -1,0 +1,32 @@
+DOM refers to the Document Object Model
+
+We are able to access all our HTML elements through Javascript because of this Document Object Model.
+
+Window object is not a Javascript object.
+
+Window object is created by the browser itself automatically.
+
+This Window object is accessible in the browser console but not in nodejs because it is not a feature of Javascript. It is a global
+object provided by the browser.
+
+Similarly, the document object which is present inside the document object is not accessible in nodejs because again it is not a
+feature of javascript. It is also created by the browser itself.
+
+This document object contains the entire HTML code of the web page in the form of objects.
+
+Whenever a web-page is loaded in the brower, the browser creates a global window object, which is an object representation of the
+open tab in the browser. Inside this window object, the browser creates a document object, which is models the entire HTML code of 
+the web-page in the form of objects. This document object is accessible or available to javascript when executing the javascript code
+in the browser console. It is because of this "Document Object Model" that we are able to access all our HTML elements and 
+manipulate them using Javascript, thereby adding logic and interactivity to our web-page. 
+This what is called "Making our web-page Dynamic". Now, since all this manipulation of the web-page that happens when a user 
+interacts with the HTML elements like clicking buttons etc, is visible to the user on his browser, it is called "Front-End".
+
+
+document.getElementsByClassName("class-name") returns an HTML-Collections.
+
+document.getElementById("id") returns a unique html element.
+
+document.querySelector() returns the first element.
+
+document.querySelectorAll() returns a nodeList.

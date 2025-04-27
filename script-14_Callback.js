@@ -89,15 +89,15 @@
 
 // With Closure
 
-function attachEventListener()
-{
-    let count = 0;
-    document.getElementById("ClickMe").addEventListener("click" , () => {
-        console.log("Button Clicked !!!" , " " , ++count);
-    });
-}
+// function attachEventListener()
+// {
+//     let count = 0;
+//     document.getElementById("ClickMe").addEventListener("click" , () => {
+//         console.log("Button Clicked !!!" , " " , ++count);
+//     });
+// }
 
-attachEventListener();
+// attachEventListener();
 
 
 
@@ -130,19 +130,23 @@ attachEventListener();
 
 // Example-5:  .........  "Ania Kubow"
 
-// function firstAction(callback , message)
-// {
-//     console.log(message);
-//     setTimeout(callback , 2000);
-// }
+function secondAction(message)
+{
+    console.log(message);
+}
 
-// function secondAction(message)
-// {
-//     console.log(message);
-// }
+function firstAction(callback , message)
+{
+    console.log(message);
+    setTimeout(callback , 2000);
+}
 
 // Callback functions with arguments
-// setTimeout( () => firstAction( () => secondAction("Iam the second action !!!") , "Iam the first action !!!" ) , 5000);
+setTimeout( () => { 
+    firstAction( () => { 
+        secondAction("Iam the second action !!!") 
+    } , "Iam the first action !!!" ) 
+} , 5000);
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
@@ -161,47 +165,47 @@ attachEventListener();
 
 // Following are the functions for the above mentioned activities:
 
-function orderPizza(callback)
-{
-    console.log("Order Recieved !!!");
-    callback();
-}
+// function orderPizza(callback)
+// {
+//     console.log("Order Recieved !!!");
+//     callback();
+// }
 
-function trackOrderStatus(callback)
-{
-    console.log("Food is bieng prepared !!!");
-    callback();
-}
+// function trackOrderStatus(callback)
+// {
+//     console.log("Food is bieng prepared !!!");
+//     callback();
+// }
 
-function pizzaDelivered(callback)
-{
-    console.log("Order is delivered !!!");
-    callback();
-}
+// function pizzaDelivered(callback)
+// {
+//     console.log("Order is delivered !!!");
+//     callback();
+// }
 
-function eatPizza(callback)
-{
-    console.log("Enjoy your pizza !!!");
-    callback();
-}
+// function eatPizza(callback)
+// {
+//     console.log("Enjoy your pizza !!!");
+//     callback();
+// }
 
-function rateOrder()
-{
-    console.log("Feedback is provided !!!");
-}
+// function rateOrder()
+// {
+//     console.log("Feedback is provided !!!");
+// }
 
-// Calling the functions
-orderPizza( () => { 
-    trackOrderStatus( () => { 
-        pizzaDelivered( () => { 
-            eatPizza( () => { 
-                rateOrder(); 
-            } ); 
-        } ); 
-    } ); 
-} );
+// // Calling the functions
+// orderPizza( () => { 
+//     trackOrderStatus( () => { 
+//         pizzaDelivered( () => { 
+//             eatPizza( () => { 
+//                 rateOrder(); 
+//             } ); 
+//         } ); 
+//     } ); 
+// } );
 
 // NOTE: This type of nested function calling is an example of Callback-Hell. It is difficult to understand and manage and 
-//       hence not the ideal. The solution for the callback-hell problem are Promises in javascript. 
+//       hence not ideal. The solution for the callback-hell problem are Promises in javascript. 
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
